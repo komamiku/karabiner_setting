@@ -1,0 +1,41 @@
+{
+    "title": "ctrl to esc / ctrl",
+    "rules": [
+        {
+            "description": "ctrlを単体で押したときはESC、長押しまたは他キーとの同時押しでctrlを送信する。",
+            "manipulators": [
+                {
+                    "from": {
+                        "key_code": "left_control",
+                        "modifiers": {
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "parameters": {
+                        "basic.to_if_held_down_threshold_milliseconds": 100
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_control",
+                            "lazy": true
+                        }
+                    ],
+                    "to_if_alone": [
+                        {
+                            "key_code": "escape"
+                        }
+                    ],
+                    "to_if_held_down": [
+                        {
+                            "key_code": "left_control"
+                        }
+                    ],
+                    "type": "basic"
+                }
+            ]
+        }
+    ]
+}
+                    
