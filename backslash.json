@@ -1,0 +1,20 @@
+{
+  "title": "my rule",
+  "rules": [
+   {
+      "description": "'ろ'にバックスラッシュ、Shift+'ろ'にアンダースコアを割り当てる",
+      "manipulators": [
+        {
+          "type": "basic",
+          "description": "'ろ'にバックスラッシュを割り当てる（Shift+'ろ'は、上書きの必要なし）",
+          "from": { "key_code": "international1" },
+          "to":[ {
+              "key_code": "international3",
+              "modifiers": ["option"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
