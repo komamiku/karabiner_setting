@@ -1,5 +1,5 @@
 {
-    "title": "ctrl to esc / ctrl",
+    "title": "Caps lock to esc / ctrl",
     "rules": [
         {
             "description": "ctrlを単体で押したときはESC、長押しまたは他キーとの同時押しでctrlを送信する。",
@@ -14,7 +14,7 @@
                         }
                     },
                     "parameters": {
-                        "basic.to_if_held_down_threshold_milliseconds": 100
+                        "basic.to_if_alone_timeout_milliseconds": 300
                     },
                     "to": [
                         {
